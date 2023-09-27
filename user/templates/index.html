@@ -1,34 +1,13 @@
-{% extends 'base.html' %}
-{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
 
-{% block content %}
+    <h1>Home Page</h1>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                {% if user.is_authenticated %}
-                    <h1 class="text-center">Welcome {{ user.username }}!</h1>
-                {% else %}
-                    <div class="d-flex flex-column">
-                        <div>
-                            <a href="{% provider_login_url 'google' %}">
-                                <button type="button" class="btn btn-secondary"><i class="bi bi-google"></i> login with Google</button>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="{% provider_login_url 'facebook' %}">
-                                <button type="button" class="btn btn-primary"><i class="bi bi-facebook"></i> login with Facebook</button>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="{% provider_login_url 'github' %}">
-                                <button type="button" class="btn btn-warning"><i class="bi bi-github"></i> login with Github</button>
-                            </a>
-                        </div>
-                    </div>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-
-{% endblock %}
+</body>
+</html>
